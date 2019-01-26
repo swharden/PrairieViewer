@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PVScan version="4.3.2.13" date="9/25/2014 2:28:33 PM" notes="">
+  <SystemConfiguration>
+    <Lasers>
+      <Laser name="Pockels" index="0" />
+    </Lasers>
+  </SystemConfiguration>
+  <Sequence type="ZSeries" cycle="1" time="14:28:33.2968750" xYStageGridDefined="False" xYStageGridNumXPositions="0" xYStageGridNumYPositions="0" xYStageGridOverlapPercentage="10" xYStageGridXOverlap="10" xYStageGridYOverlap="10">
+    <Frame relativeTime="0" absoluteTime="3.03899999999999" index="1" label="CurrentSettings">
+      <File channel="1" channelName="Ch1" preAmpID="0" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch1_000001.tif" />
+      <File channel="2" channelName="Ch2" preAmpID="1" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch2_000001.tif" />
+      <ExtraParameters lastGoodFrame="0" />
+      <PVStateShard>
+        <Key key="objectiveLens" permissions="ReadWriteSave" value="10X Plan N" />
+        <Key key="objectiveLensNA" permissions="ReadWriteSave" value="0.25" />
+        <Key key="objectiveLensMag" permissions="ReadWriteSave" value="10" />
+        <Key key="pixelsPerLine" permissions="ReadWriteSave" value="1024" />
+        <Key key="linesPerFrame" permissions="ReadWriteSave" value="1024" />
+        <Key key="binningMode" permissions="ReadWriteSave" value="0" />
+        <Key key="rastersPerFrame" permissions="ReadWriteSave" value="1" />
+        <Key key="framePeriod" permissions="ReadWriteSave" value="25.492335878036" />
+        <Key key="scanlinePeriod" permissions="ReadWriteSave" value="0.0248948592558945" />
+        <Key key="dwellTime" permissions="ReadWriteSave" value="23.2" />
+        <Key key="bitDepth" permissions="ReadWriteSave" value="12" />
+        <Key key="positionCurrent_XAxis" permissions="WriteSave" value="640.9375" />
+        <Key key="positionCurrent_YAxis" permissions="WriteSave" value="47.1875" />
+        <Key key="positionCurrent_ZAxis" permissions="WriteSave" value="-25.78" />
+        <Key key="zDevice" permissions="WriteSave" value="0" />
+        <Key key="rotation" permissions="ReadWriteSave" value="0" />
+        <Key key="opticalZoom" permissions="ReadWriteSave" value="1" />
+        <Key key="micronsPerPixel_XAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="micronsPerPixel_YAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="pmtGain_0" permissions="WriteSave" value="650" />
+        <Key key="pmtGain_1" permissions="WriteSave" value="825" />
+        <Key key="laserPower_0" permissions="WriteSave" value="10" />
+        <Key key="laserPowerCalibrated_0" permissions="WriteSave" value="0" />
+        <Key key="laserPowerAttenuation_0" permissions="WriteSave" value="0" />
+        <Key key="twophotonLaserPower_0" permissions="WriteSave" value="2926.17" />
+        <Key key="daq_0" permissions="WriteSave" value="6" />
+        <Key key="daq_1" permissions="WriteSave" value="6" />
+        <Key key="daq_2" permissions="WriteSave" value="5" />
+        <Key key="daq_3" permissions="WriteSave" value="5" />
+        <Key key="preAmpGain_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpGain_1" permissions="WriteSave" value="0" />
+        <Key key="preAmpOffset_0" permissions="WriteSave" value="7" />
+        <Key key="preAmpOffset_1" permissions="WriteSave" value="1" />
+        <Key key="preAmpFilterBlock_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpFilterBlock_1" permissions="WriteSave" value="0" />
+        <Key key="minVoltage_XAxis" permissions="WriteSave" value="-1.5" />
+        <Key key="minVoltage_YAxis" permissions="WriteSave" value="1.5" />
+        <Key key="maxVoltage_XAxis" permissions="WriteSave" value="1.50293255131965" />
+        <Key key="maxVoltage_YAxis" permissions="WriteSave" value="-1.50293255131965" />
+        <Key key="activeMode" permissions="WriteSave" value="1" description="Galvo" />
+      </PVStateShard>
+    </Frame>
+    <Frame relativeTime="26.144" absoluteTime="29.183" index="2" label="CurrentSettings">
+      <File channel="1" channelName="Ch1" preAmpID="0" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch1_000002.tif" />
+      <File channel="2" channelName="Ch2" preAmpID="1" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch2_000002.tif" />
+      <ExtraParameters lastGoodFrame="0" />
+      <PVStateShard>
+        <Key key="objectiveLens" permissions="ReadWriteSave" value="10X Plan N" />
+        <Key key="objectiveLensNA" permissions="ReadWriteSave" value="0.25" />
+        <Key key="objectiveLensMag" permissions="ReadWriteSave" value="10" />
+        <Key key="pixelsPerLine" permissions="ReadWriteSave" value="1024" />
+        <Key key="linesPerFrame" permissions="ReadWriteSave" value="1024" />
+        <Key key="binningMode" permissions="ReadWriteSave" value="0" />
+        <Key key="rastersPerFrame" permissions="ReadWriteSave" value="1" />
+        <Key key="framePeriod" permissions="ReadWriteSave" value="25.492335878036" />
+        <Key key="scanlinePeriod" permissions="ReadWriteSave" value="0.0248948592558945" />
+        <Key key="dwellTime" permissions="ReadWriteSave" value="23.2" />
+        <Key key="bitDepth" permissions="ReadWriteSave" value="12" />
+        <Key key="positionCurrent_XAxis" permissions="WriteSave" value="640.9375" />
+        <Key key="positionCurrent_YAxis" permissions="WriteSave" value="47.1875" />
+        <Key key="positionCurrent_ZAxis" permissions="WriteSave" value="-22.78" />
+        <Key key="zDevice" permissions="WriteSave" value="0" />
+        <Key key="rotation" permissions="ReadWriteSave" value="0" />
+        <Key key="opticalZoom" permissions="ReadWriteSave" value="1" />
+        <Key key="micronsPerPixel_XAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="micronsPerPixel_YAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="pmtGain_0" permissions="WriteSave" value="650" />
+        <Key key="pmtGain_1" permissions="WriteSave" value="825" />
+        <Key key="laserPower_0" permissions="WriteSave" value="10" />
+        <Key key="laserPowerCalibrated_0" permissions="WriteSave" value="0" />
+        <Key key="laserPowerAttenuation_0" permissions="WriteSave" value="0" />
+        <Key key="twophotonLaserPower_0" permissions="WriteSave" value="2926.17" />
+        <Key key="daq_0" permissions="WriteSave" value="6" />
+        <Key key="daq_1" permissions="WriteSave" value="6" />
+        <Key key="daq_2" permissions="WriteSave" value="5" />
+        <Key key="daq_3" permissions="WriteSave" value="5" />
+        <Key key="preAmpGain_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpGain_1" permissions="WriteSave" value="0" />
+        <Key key="preAmpOffset_0" permissions="WriteSave" value="7" />
+        <Key key="preAmpOffset_1" permissions="WriteSave" value="1" />
+        <Key key="preAmpFilterBlock_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpFilterBlock_1" permissions="WriteSave" value="0" />
+        <Key key="minVoltage_XAxis" permissions="WriteSave" value="-1.5" />
+        <Key key="minVoltage_YAxis" permissions="WriteSave" value="1.5" />
+        <Key key="maxVoltage_XAxis" permissions="WriteSave" value="1.50293255131965" />
+        <Key key="maxVoltage_YAxis" permissions="WriteSave" value="-1.50293255131965" />
+        <Key key="activeMode" permissions="WriteSave" value="1" description="Galvo" />
+      </PVStateShard>
+    </Frame>
+    <Frame relativeTime="52.3150000000001" absoluteTime="55.354" index="3" label="CurrentSettings">
+      <File channel="1" channelName="Ch1" preAmpID="0" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch1_000003.tif" />
+      <File channel="2" channelName="Ch2" preAmpID="1" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch2_000003.tif" />
+      <ExtraParameters lastGoodFrame="0" />
+      <PVStateShard>
+        <Key key="objectiveLens" permissions="ReadWriteSave" value="10X Plan N" />
+        <Key key="objectiveLensNA" permissions="ReadWriteSave" value="0.25" />
+        <Key key="objectiveLensMag" permissions="ReadWriteSave" value="10" />
+        <Key key="pixelsPerLine" permissions="ReadWriteSave" value="1024" />
+        <Key key="linesPerFrame" permissions="ReadWriteSave" value="1024" />
+        <Key key="binningMode" permissions="ReadWriteSave" value="0" />
+        <Key key="rastersPerFrame" permissions="ReadWriteSave" value="1" />
+        <Key key="framePeriod" permissions="ReadWriteSave" value="25.492335878036" />
+        <Key key="scanlinePeriod" permissions="ReadWriteSave" value="0.0248948592558945" />
+        <Key key="dwellTime" permissions="ReadWriteSave" value="23.2" />
+        <Key key="bitDepth" permissions="ReadWriteSave" value="12" />
+        <Key key="positionCurrent_XAxis" permissions="WriteSave" value="640.9375" />
+        <Key key="positionCurrent_YAxis" permissions="WriteSave" value="47.1875" />
+        <Key key="positionCurrent_ZAxis" permissions="WriteSave" value="-19.78" />
+        <Key key="zDevice" permissions="WriteSave" value="0" />
+        <Key key="rotation" permissions="ReadWriteSave" value="0" />
+        <Key key="opticalZoom" permissions="ReadWriteSave" value="1" />
+        <Key key="micronsPerPixel_XAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="micronsPerPixel_YAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="pmtGain_0" permissions="WriteSave" value="650" />
+        <Key key="pmtGain_1" permissions="WriteSave" value="825" />
+        <Key key="laserPower_0" permissions="WriteSave" value="10" />
+        <Key key="laserPowerCalibrated_0" permissions="WriteSave" value="0" />
+        <Key key="laserPowerAttenuation_0" permissions="WriteSave" value="0" />
+        <Key key="twophotonLaserPower_0" permissions="WriteSave" value="2926.17" />
+        <Key key="daq_0" permissions="WriteSave" value="6" />
+        <Key key="daq_1" permissions="WriteSave" value="6" />
+        <Key key="daq_2" permissions="WriteSave" value="5" />
+        <Key key="daq_3" permissions="WriteSave" value="5" />
+        <Key key="preAmpGain_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpGain_1" permissions="WriteSave" value="0" />
+        <Key key="preAmpOffset_0" permissions="WriteSave" value="7" />
+        <Key key="preAmpOffset_1" permissions="WriteSave" value="1" />
+        <Key key="preAmpFilterBlock_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpFilterBlock_1" permissions="WriteSave" value="0" />
+        <Key key="minVoltage_XAxis" permissions="WriteSave" value="-1.5" />
+        <Key key="minVoltage_YAxis" permissions="WriteSave" value="1.5" />
+        <Key key="maxVoltage_XAxis" permissions="WriteSave" value="1.50293255131965" />
+        <Key key="maxVoltage_YAxis" permissions="WriteSave" value="-1.50293255131965" />
+        <Key key="activeMode" permissions="WriteSave" value="1" description="Galvo" />
+      </PVStateShard>
+    </Frame>
+    <Frame relativeTime="78.5119999999999" absoluteTime="81.5509999999999" index="4" label="CurrentSettings">
+      <File channel="1" channelName="Ch1" preAmpID="0" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch1_000004.tif" />
+      <File channel="2" channelName="Ch2" preAmpID="1" filename="ZSeries-09252014-1411-508_Cycle00001_CurrentSettings_Ch2_000004.tif" />
+      <ExtraParameters lastGoodFrame="0" />
+      <PVStateShard>
+        <Key key="objectiveLens" permissions="ReadWriteSave" value="10X Plan N" />
+        <Key key="objectiveLensNA" permissions="ReadWriteSave" value="0.25" />
+        <Key key="objectiveLensMag" permissions="ReadWriteSave" value="10" />
+        <Key key="pixelsPerLine" permissions="ReadWriteSave" value="1024" />
+        <Key key="linesPerFrame" permissions="ReadWriteSave" value="1024" />
+        <Key key="binningMode" permissions="ReadWriteSave" value="0" />
+        <Key key="rastersPerFrame" permissions="ReadWriteSave" value="1" />
+        <Key key="framePeriod" permissions="ReadWriteSave" value="25.492335878036" />
+        <Key key="scanlinePeriod" permissions="ReadWriteSave" value="0.0248948592558945" />
+        <Key key="dwellTime" permissions="ReadWriteSave" value="23.2" />
+        <Key key="bitDepth" permissions="ReadWriteSave" value="12" />
+        <Key key="positionCurrent_XAxis" permissions="WriteSave" value="640.9375" />
+        <Key key="positionCurrent_YAxis" permissions="WriteSave" value="47.1875" />
+        <Key key="positionCurrent_ZAxis" permissions="WriteSave" value="-16.78" />
+        <Key key="zDevice" permissions="WriteSave" value="0" />
+        <Key key="rotation" permissions="ReadWriteSave" value="0" />
+        <Key key="opticalZoom" permissions="ReadWriteSave" value="1" />
+        <Key key="micronsPerPixel_XAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="micronsPerPixel_YAxis" permissions="ReadWriteSave" value="1.37254901960784" />
+        <Key key="pmtGain_0" permissions="WriteSave" value="650" />
+        <Key key="pmtGain_1" permissions="WriteSave" value="825" />
+        <Key key="laserPower_0" permissions="WriteSave" value="10" />
+        <Key key="laserPowerCalibrated_0" permissions="WriteSave" value="0" />
+        <Key key="laserPowerAttenuation_0" permissions="WriteSave" value="0" />
+        <Key key="twophotonLaserPower_0" permissions="WriteSave" value="2926.17" />
+        <Key key="daq_0" permissions="WriteSave" value="6" />
+        <Key key="daq_1" permissions="WriteSave" value="6" />
+        <Key key="daq_2" permissions="WriteSave" value="5" />
+        <Key key="daq_3" permissions="WriteSave" value="5" />
+        <Key key="preAmpGain_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpGain_1" permissions="WriteSave" value="0" />
+        <Key key="preAmpOffset_0" permissions="WriteSave" value="7" />
+        <Key key="preAmpOffset_1" permissions="WriteSave" value="1" />
+        <Key key="preAmpFilterBlock_0" permissions="WriteSave" value="0" />
+        <Key key="preAmpFilterBlock_1" permissions="WriteSave" value="0" />
+        <Key key="minVoltage_XAxis" permissions="WriteSave" value="-1.5" />
+        <Key key="minVoltage_YAxis" permissions="WriteSave" value="1.5" />
+        <Key key="maxVoltage_XAxis" permissions="WriteSave" value="1.50293255131965" />
+        <Key key="maxVoltage_YAxis" permissions="WriteSave" value="-1.50293255131965" />
+        <Key key="activeMode" permissions="WriteSave" value="1" description="Galvo" />
+      </PVStateShard>
+    </Frame>
+  </Sequence>
+</PVScan>
