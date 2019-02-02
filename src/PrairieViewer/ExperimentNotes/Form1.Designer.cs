@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbPathXML = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,6 +56,8 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.tbXML = new System.Windows.Forms.TextBox();
+            this.cbTimer = new System.Windows.Forms.CheckBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTime)).BeginInit();
@@ -102,6 +105,7 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Notes";
+            this.groupBox1.Leave += new System.EventHandler(this.groupBox1_Leave);
             // 
             // tbNotes
             // 
@@ -161,6 +165,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbTimer);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.cbTimeUnits);
             this.groupBox2.Controls.Add(this.btnTagNew);
@@ -340,6 +345,21 @@
             this.tbXML.Size = new System.Drawing.Size(563, 147);
             this.tbXML.TabIndex = 0;
             // 
+            // cbTimer
+            // 
+            this.cbTimer.AutoSize = true;
+            this.cbTimer.Location = new System.Drawing.Point(210, 131);
+            this.cbTimer.Name = "cbTimer";
+            this.cbTimer.Size = new System.Drawing.Size(48, 17);
+            this.cbTimer.TabIndex = 31;
+            this.cbTimer.Text = "timer";
+            this.cbTimer.UseVisualStyleBackColor = true;
+            this.cbTimer.CheckedChanged += new System.EventHandler(this.cbTimer_CheckedChanged);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +410,8 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox tbXML;
+        private System.Windows.Forms.CheckBox cbTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

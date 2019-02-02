@@ -22,6 +22,7 @@ namespace ExperimentNotes
         private void Form1_Load(object sender, EventArgs e)
         {
             tbPathXML.Text = System.IO.Path.GetFullPath("test.xml");
+            cbTimeUnits.Text = "sec";
 
             // create or load an experiment
             exp = new Experiment();
@@ -74,7 +75,8 @@ namespace ExperimentNotes
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            exp.modified = exp.GetTimeStamp();
+            exp.Save(tbPathXML.Text);
+            btnPreview_Click(null, null);
         }
 
         private void btnTagDelete_Click(object sender, EventArgs e)
@@ -89,7 +91,7 @@ namespace ExperimentNotes
                 if (selectedTag < lbTags.Items.Count)
                     lbTags.SelectedIndex = selectedTag;
                 else
-                    lbTags.SelectedIndex = lbTags.Items.Count-1;
+                    lbTags.SelectedIndex = lbTags.Items.Count - 1;
             }
         }
 
@@ -109,6 +111,38 @@ namespace ExperimentNotes
             Tag tag = new Tag(tbComment.Text, (double)nudTime.Value, cbTimeUnits.Text);
             exp.tags[selectedTag] = tag;
             UpdateGuiFromExperiment();
+        }
+
+        double timeStarted;
+        private void cbTimer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbTimer.Checked)
+            {
+                nudTime.Enabled = false;
+                cbTimeUnits.Enabled = false;
+                cbTimeUnits.Text = "sec";
+                timeStarted = DateTime.Now.Ticks / TimeSpan.TicksPerSecond;
+                timer1.Start();
+            }
+            else
+            {
+                timer1.Stop();
+                nudTime.Enabled = true;
+                cbTimeUnits.Enabled = true;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            double timeNow = DateTime.Now.Ticks / (double)TimeSpan.TicksPerSecond;
+            double secElapsed = timeNow - timeStarted;
+            secElapsed = Math.Round(secElapsed, 2);
+            nudTime.Value = (decimal)secElapsed;
+        }
+
+        private void groupBox1_Leave(object sender, EventArgs e)
+        {
+            UpdateExperimentFromGUI();
         }
     }
 }

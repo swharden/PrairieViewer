@@ -85,6 +85,12 @@ namespace ExperimentNotes
 
             return xmlDoc.ToString();
         }
+
+        public void Save(string filePath)
+        {
+            modified = GetTimeStamp();
+            System.IO.File.WriteAllText(filePath, GetXML());
+        }
     }
 
     public class Tag
@@ -93,11 +99,11 @@ namespace ExperimentNotes
         public double timeValue;
         public string comment;
 
-        public Tag(string comment, double value, string unit)
+        public Tag(string comment, double timeValue, string timeUnit)
         {
             this.comment = comment;
-            this.timeValue = value;
-            this.timeUnit = unit;
+            this.timeValue = timeValue;
+            this.timeUnit = timeUnit;
         }
 
         public override string ToString()
