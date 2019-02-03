@@ -21,7 +21,7 @@ namespace PrairieNotes
             cbTimeUnits.Text = "min";
             PathOutputFolder = System.IO.Path.GetFullPath("../");
             //PathOutputFolder = System.IO.Path.GetFullPath("../../../../../data/stripped/");
-            PathOutputFolder = System.IO.Path.GetFullPath("../../../../../data/minimal/");
+            //PathOutputFolder = System.IO.Path.GetFullPath("../../../../../data/minimal/");
             ScanExperimentFolder();
         }
 
