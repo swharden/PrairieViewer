@@ -22,7 +22,9 @@ namespace PrairieViewer
             PathFolder = pathFolder;
             FolderName = System.IO.Path.GetFileName(pathFolder);
             ReadFileNames();
-            info = new ScanInfo(PathXML);
+
+            if (PathXML != null)
+                info = new ScanInfo(PathXML);
         }
 
         private void ReadFileNames()

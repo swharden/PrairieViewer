@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Experiment.cs" />
     <Compile Include="PrairieFolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScanInfo.cs" />

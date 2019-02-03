@@ -26,10 +26,13 @@ namespace PrairieViewer
         public double[] FrameTimes;
         public string LaserName;
         public double LaserPower;
+        public int FrameCount;
         private Laser[] Lasers;
+        public string PathXML;
 
         public ScanInfo(string pathXML)
         {
+            PathXML = System.IO.Path.GetFullPath(pathXML);
 
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(pathXML);
@@ -71,20 +74,22 @@ namespace PrairieViewer
 
             // frame-by-frame details
             XmlNodeList nodesFrame = xmlDoc.DocumentElement.SelectNodes("/PVScan/Sequence/Frame");
-            int frameCount = nodesFrame.Count;
-            FrameTimes = new double[frameCount];
-            for (int i = 0; i < frameCount; i++)
-                FrameTimes[i] = double.Parse(nodesFrame[i].Attributes["relativeTime"].Value);
+            FrameCount = nodesFrame.Count;
+            FrameTimes = new double[FrameCount];
+            for (int i = 0; i < FrameCount; i++)
+                FrameTimes[i] = double.Parse(nodesFrame[i].Attributes["relativeTime"].Value);            
+        }
 
-            // display info
-            Console.WriteLine("");
-            Console.WriteLine($"PV version: {Version}");
-            Console.WriteLine($"filename: {System.IO.Path.GetFileName(pathXML)}");
-            Console.WriteLine($"scan type: {SequenceType}");
-            Console.WriteLine($"frame count: {nodesFrame.Count}");
-            Console.WriteLine($"lasers: {Lasers.Length}");
-            Console.WriteLine($"primary laser: {LaserName} (power: {LaserPower})");
-
+        public string GetInfo()
+        {
+            string message = "";
+            message += $"PV version: {Version}\n";
+            message += $"filename: {System.IO.Path.GetFileName(PathXML)}\n";
+            message += $"scan type: {SequenceType}\n";
+            message += $"frame count: {FrameCount}\n";
+            message += $"lasers: {Lasers.Length}\n";
+            message += $"primary laser: {LaserName} (power: {LaserPower})\n";
+            return message.Trim();
         }
     }
 }

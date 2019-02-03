@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B15C36F4-3B4D-481E-AD1D-63CA656D61EF}</ProjectGuid>
+    <ProjectGuid>{90F5A232-4828-424B-93DC-74BCB46E1FB2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ExperimentNotes</RootNamespace>
-    <AssemblyName>ExperimentNotes</AssemblyName>
+    <RootNamespace>PrairieNotes</RootNamespace>
+    <AssemblyName>PrairieNotes</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Experiment.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrairieViewer\PrairieViewer.csproj">
+      <Project>{acddb0a0-8aa1-4d08-9962-f6e5776a0d72}</Project>
+      <Name>PrairieViewer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
