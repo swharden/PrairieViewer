@@ -46,6 +46,9 @@
             this.lbTags = new System.Windows.Forms.ListBox();
             this.btnXmlRevert = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnXmlSave = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbInternal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -61,17 +64,16 @@
             this.documentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbFolderNames = new System.Windows.Forms.ListBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbRefImages = new System.Windows.Forms.GroupBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tbInternal = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnXmlSave = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nudTime)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.gbRefImages.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -266,6 +268,33 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "experiment.xml";
             // 
+            // btnXmlSave
+            // 
+            this.btnXmlSave.Location = new System.Drawing.Point(215, 16);
+            this.btnXmlSave.Name = "btnXmlSave";
+            this.btnXmlSave.Size = new System.Drawing.Size(93, 23);
+            this.btnXmlSave.TabIndex = 36;
+            this.btnXmlSave.Text = "Save Changes";
+            this.btnXmlSave.UseVisualStyleBackColor = true;
+            this.btnXmlSave.Click += new System.EventHandler(this.btnXmlSave_Click_1);
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(6, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 20);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Internal:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbInternal
+            // 
+            this.tbInternal.Location = new System.Drawing.Point(62, 97);
+            this.tbInternal.Name = "tbInternal";
+            this.tbInternal.Size = new System.Drawing.Size(246, 20);
+            this.tbInternal.TabIndex = 34;
+            this.tbInternal.TextChanged += new System.EventHandler(this.tbInternal_TextChanged);
+            // 
             // label4
             // 
             this.label4.Location = new System.Drawing.Point(59, 331);
@@ -374,14 +403,14 @@
             // documentationToolStripMenuItem
             // 
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
-            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
             this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -396,15 +425,15 @@
             this.lbFolderNames.SelectedIndexChanged += new System.EventHandler(this.lbFolderNames_SelectedIndexChanged);
             this.lbFolderNames.DoubleClick += new System.EventHandler(this.lbFolderNames_DoubleClick);
             // 
-            // groupBox1
+            // gbRefImages
             // 
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(538, 227);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(377, 188);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Prairie Experiment Images";
+            this.gbRefImages.Controls.Add(this.panel1);
+            this.gbRefImages.Location = new System.Drawing.Point(538, 227);
+            this.gbRefImages.Name = "gbRefImages";
+            this.gbRefImages.Size = new System.Drawing.Size(377, 188);
+            this.gbRefImages.TabIndex = 36;
+            this.gbRefImages.TabStop = false;
+            this.gbRefImages.Text = "Reference Images";
             // 
             // statusStrip1
             // 
@@ -422,36 +451,18 @@
             this.lblStatus.Size = new System.Drawing.Size(118, 17);
             this.lblStatus.Text = "toolStripStatusLabel1";
             // 
-            // tbInternal
-            // 
-            this.tbInternal.Location = new System.Drawing.Point(62, 97);
-            this.tbInternal.Name = "tbInternal";
-            this.tbInternal.Size = new System.Drawing.Size(246, 20);
-            this.tbInternal.TabIndex = 34;
-            this.tbInternal.TextChanged += new System.EventHandler(this.tbInternal_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(6, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Internal:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnXmlSave
-            // 
-            this.btnXmlSave.Location = new System.Drawing.Point(215, 16);
-            this.btnXmlSave.Name = "btnXmlSave";
-            this.btnXmlSave.Size = new System.Drawing.Size(93, 23);
-            this.btnXmlSave.TabIndex = 36;
-            this.btnXmlSave.Text = "Save Changes";
-            this.btnXmlSave.UseVisualStyleBackColor = true;
-            this.btnXmlSave.Click += new System.EventHandler(this.btnXmlSave_Click_1);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(371, 169);
+            this.panel1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -459,7 +470,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 448);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbRefImages);
             this.Controls.Add(this.lbFolderNames);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -477,6 +488,7 @@
             this.groupBox5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gbRefImages.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -517,13 +529,14 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbRefImages;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbInternal;
         private System.Windows.Forms.Button btnXmlSave;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -1,0 +1,11 @@
+<experiment version="1" created="2019-02-03T10:06:18" modified="2019-02-03T10:06:26">
+  <notes>asdf single</notes>
+  <animal>asdf</animal>
+  <bath></bath>
+  <internal></internal>
+  <tags>
+    <tag timeValue="12.34" timeUnit="min">a</tag>
+    <tag timeValue="12.34" timeUnit="min">b</tag>
+    <tag timeValue="12.34" timeUnit="min">c</tag>
+  </tags>
+</experiment>

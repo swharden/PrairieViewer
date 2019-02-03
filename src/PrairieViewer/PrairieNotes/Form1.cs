@@ -19,7 +19,9 @@ namespace PrairieNotes
         {
             InitializeComponent();
             cbTimeUnits.Text = "min";
-            PathOutputFolder = System.IO.Path.GetFullPath("../../../../../data/stripped/");
+            PathOutputFolder = System.IO.Path.GetFullPath("../");
+            //PathOutputFolder = System.IO.Path.GetFullPath("../../../../../data/stripped/");
+            PathOutputFolder = System.IO.Path.GetFullPath("../../../../../data/minimal/");
             ScanExperimentFolder();
         }
 
@@ -46,6 +48,12 @@ namespace PrairieNotes
         // re-scal the experiment folder and update the list of experiments
         private void ScanExperimentFolder(int selectIndex = 0)
         {
+            if (!System.IO.Directory.Exists(PathOutputFolder))
+            {
+                lblStatus.Text = $"Directory does not exist: {PathOutputFolder}";
+                return;
+            }
+                
             var di = new System.IO.DirectoryInfo(PathOutputFolder);
             var folderNames = di.EnumerateDirectories()
                                 .OrderBy(d => d.CreationTime)
@@ -64,7 +72,7 @@ namespace PrairieNotes
                 lbFolderNames_SelectedIndexChanged(null, null);
             }
 
-            lblStatus.Text = ($"Scanned experiment folder (found {lbFolderNames.Items.Count} sub-folders)");
+            lblStatus.Text = ($"Scanned experiment folder: {PathOutputFolder}");
         }
 
         // when a given folder is selected, the GUI will be updated
@@ -80,6 +88,46 @@ namespace PrairieNotes
             exp = new PrairieViewer.Experiment(pathSelected);
             UpdateGuiFromExperiment();
             SaveNeeded(false);
+
+            // load reference images
+            panel1.Controls.Clear();
+            int refImageCount = 0;
+            string refImageFolder = System.IO.Path.Combine(pathSelected, "References");
+            if (System.IO.Directory.Exists(refImageFolder))
+            {
+                string[] refImagePaths = System.IO.Directory.GetFiles(refImageFolder, "*.tif");
+                int nextYPos = 10;
+                int fixedImageWidth = 330;
+                foreach (string refImagePath in refImagePaths)
+                {
+                    string imageFileName = System.IO.Path.GetFileName(refImagePath);
+                    if (imageFileName.Contains("16bit"))
+                        continue;
+                    else
+                        refImageCount += 1;
+
+                    // add the label
+                    Label lbl = new Label();
+                    lbl.Location = new Point(10, nextYPos);
+                    lbl.Text = imageFileName;
+                    lbl.AutoSize = true;
+                    lbl.Font = new Font("Arial", 8);
+                    panel1.Controls.Add(lbl);
+                    nextYPos += 20;
+
+                    // add the image
+                    Bitmap bmp = new Bitmap(refImagePath);
+                    double heightToWidthRatio = (double)bmp.Height / (double)bmp.Width;
+                    PictureBox pb = new PictureBox();
+                    pb.BackgroundImage = bmp;
+                    pb.BackgroundImageLayout = ImageLayout.Zoom;
+                    pb.Size = new Size(fixedImageWidth, (int)(fixedImageWidth * heightToWidthRatio));
+                    pb.Location = new Point(10, nextYPos);
+                    panel1.Controls.Add(pb);
+                    nextYPos += pb.Height + 30;
+                }
+            }
+            gbRefImages.Text = $"Reference Images ({refImageCount})";
 
             lblStatus.Text = $"Loaded information about {pf.FolderName}";
         }

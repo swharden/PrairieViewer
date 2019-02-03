@@ -1,0 +1,9 @@
+<experiment version="1" created="2019-02-03T10:05:59" modified="2019-02-03T10:06:14">
+  <notes>ts</notes>
+  <animal>test</animal>
+  <bath></bath>
+  <internal></internal>
+  <tags>
+    <tag timeValue="12.34" timeUnit="min">dunno</tag>
+  </tags>
+</experiment>
