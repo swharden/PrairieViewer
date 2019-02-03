@@ -40,11 +40,15 @@ namespace PrairieViewer
 
         public void TagDelete(int tagIndex)
         {
+            if (tagIndex < 0 || tagIndex >= tags.Count)
+                return;
             tags.RemoveAt(tagIndex);
         }
 
         public void TagReplace(string comment, double timeValue, string timeUnit, int tagIndex)
         {
+            if (tagIndex < 0 || tagIndex >= tags.Count)
+                return;
             Tag tag = new Tag(comment, timeValue, timeUnit);
             tags[tagIndex] = tag;
         }

@@ -1,12 +1,12 @@
-<experiment version="1" created="2019-02-02T22:32:59" modified="2019-02-02T22:33:13">
-  <notes>lets try this&lt;br&gt;&lt;br&gt;again!&lt;br&gt;&lt;br&gt;okay sure \n why not?&lt;br&gt;because!</notes>
-  <animal>OTR-Cre w/ PFC GCaMP6f</animal>
+<experiment version="1" created="2019-02-02T22:42:19" modified="2019-02-02T22:42:40">
+  <notes>animal had magical powers</notes>
+  <animal>SST-Cre w/ NAC GCaMP6f</animal>
   <bath>ACSF +DNQX +AP5 +PTX +CGP</bath>
   <internal>K-glu +BC</internal>
   <tags>
     <tag timeValue="12.34" timeUnit="min">drug</tag>
     <tag timeValue="32.1" timeUnit="min">fancy drug</tag>
-    <tag timeValue="99" timeUnit="frame">fanfare</tag>
+    <tag timeValue="42" timeUnit="frame">much celebration</tag>
     <tag timeValue="9.725" timeUnit="min">tag1</tag>
     <tag timeValue="12.567" timeUnit="min">tag2</tag>
   </tags>

@@ -224,6 +224,7 @@
             this.lbTags.ScrollAlwaysVisible = true;
             this.lbTags.Size = new System.Drawing.Size(246, 82);
             this.lbTags.TabIndex = 0;
+            this.lbTags.SelectedIndexChanged += new System.EventHandler(this.lbTags_SelectedIndexChanged);
             // 
             // btnXmlRevert
             // 
@@ -288,7 +289,7 @@
             this.groupBox5.Controls.Add(this.tbPvInfo);
             this.groupBox5.Location = new System.Drawing.Point(538, 27);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(377, 130);
+            this.groupBox5.Size = new System.Drawing.Size(377, 194);
             this.groupBox5.TabIndex = 33;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Prairie Experiment Details";
@@ -302,7 +303,7 @@
             this.tbPvInfo.Location = new System.Drawing.Point(3, 16);
             this.tbPvInfo.Multiline = true;
             this.tbPvInfo.Name = "tbPvInfo";
-            this.tbPvInfo.Size = new System.Drawing.Size(371, 111);
+            this.tbPvInfo.Size = new System.Drawing.Size(371, 175);
             this.tbPvInfo.TabIndex = 15;
             // 
             // menuStrip1
@@ -373,14 +374,16 @@
             // documentationToolStripMenuItem
             // 
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
-            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // lbFolderNames
             // 
@@ -396,9 +399,9 @@
             // groupBox1
             // 
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(538, 163);
+            this.groupBox1.Location = new System.Drawing.Point(538, 227);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(377, 252);
+            this.groupBox1.Size = new System.Drawing.Size(377, 188);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prairie Experiment Images";
@@ -461,10 +464,12 @@
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Prairie Notes";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.nudTime)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

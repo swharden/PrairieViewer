@@ -92,6 +92,7 @@ namespace PrairieNotes
             tbNotes.Text = exp.notes;
             lbTags.Items.Clear();
             lbTags.Items.AddRange(exp.TagStrings());
+            lbTags_SelectedIndexChanged(null, null);
         }
 
         private void SaveNeeded(bool saveIsNeeded = true)
@@ -202,18 +203,23 @@ namespace PrairieNotes
                 timer1.Enabled = true;
                 nudTime.Enabled = false;
                 cbTimeUnits.Enabled = false;
+                lbTags.Enabled = false;
+                cbTimeUnits.Text = "min";
+                lbTags.SelectedIndex = -1;
             }
             else
             {
                 timer1.Enabled = false;
                 nudTime.Enabled = true;
                 cbTimeUnits.Enabled = true;
+                lbTags.Enabled = true;
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            nudTime.Value = (decimal)(stopwatch.ElapsedMilliseconds / 1000.0);
+            double minutesPassed = stopwatch.ElapsedMilliseconds / 1000.0 / 60.0;
+            nudTime.Value = (decimal)(Math.Round(minutesPassed, 2));
         }
 
         private void setExperimentFolderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,6 +250,48 @@ namespace PrairieNotes
             {
                 System.IO.Directory.Delete(exp.pathSelectedFolder, true);
                 ScanExperimentFolder();
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Delete:
+                    deleteToolStripMenuItem_Click(null, null);
+                    break;
+                case Keys.F5:
+                    ScanExperimentFolder();
+                    break;
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/swharden/PrairieViewer");
+        }
+
+        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/swharden/PrairieViewer");
+        }
+
+        private void lbTags_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbTags.SelectedIndex < 0 || lbTags.SelectedIndex >= exp.tags.Count)
+            {
+                btnTagReplace.Enabled = false;
+                btnTagDelete.Enabled = false;
+                return;
+            }
+            else
+            {
+                btnTagReplace.Enabled = true;
+                btnTagDelete.Enabled = true;
+
+                tbComment.Text = exp.tags[lbTags.SelectedIndex].comment;
+                nudTime.Value = (decimal)exp.tags[lbTags.SelectedIndex].timeValue;
+                cbTimeUnits.Text = exp.tags[lbTags.SelectedIndex].timeUnit;
             }
         }
     }
