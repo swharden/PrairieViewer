@@ -117,6 +117,7 @@ namespace PrairieNotes
         private void XmlSave()
         {
             exp.Save();
+            lblStatus.Text = "Saved experiment.xml";
         }
 
         /////////////////////////////////////////////////////////////////////////////////
@@ -131,6 +132,7 @@ namespace PrairieNotes
         private void lbFolderNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             FolderSelected(lbFolderNames.SelectedItem.ToString());
+            lbFolderNames.Focus();
         }
 
         private void btnXmlRevert_Click(object sender, EventArgs e)

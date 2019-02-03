@@ -27,6 +27,8 @@ namespace PrairieViewer
         public string LaserName;
         public double LaserPower;
         public int FrameCount;
+        public double FramePeriod;
+        public double FrameRate { get { return 1.0 / FramePeriod; } }
         private Laser[] Lasers;
         public string PathXML;
 
@@ -43,6 +45,11 @@ namespace PrairieViewer
 
             // scan settings
             SequenceType = xmlDoc.DocumentElement.SelectSingleNode("/PVScan/Sequence").Attributes["type"].Value;
+
+            // frame period
+            XmlNodeList nodesFramePeriod = xmlDoc.DocumentElement.SelectNodes("/PVScan/PVStateShard/PVStateValue[@key='framePeriod']");
+            if (nodesFramePeriod.Count > 0)
+                FramePeriod = double.Parse(nodesFramePeriod[0].Attributes["value"].Value);
 
             // load all laser settings
             LaserName = "none";
@@ -87,8 +94,9 @@ namespace PrairieViewer
             message += $"filename: {System.IO.Path.GetFileName(PathXML)}\n";
             message += $"scan type: {SequenceType}\n";
             message += $"frame count: {FrameCount}\n";
+            message += $"frame period: {Math.Round(FramePeriod, 3)} sec ({Math.Round(FrameRate, 3)} Hz)\n";
             message += $"lasers: {Lasers.Length}\n";
-            message += $"primary laser: {LaserName} (power: {LaserPower})\n";
+            message += $"primary laser: {LaserName} (power: {Math.Round(LaserPower, 2)})\n";
             return message.Trim();
         }
     }

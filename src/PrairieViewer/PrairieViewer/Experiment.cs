@@ -57,7 +57,7 @@ namespace PrairieViewer
         {
             string[] tagStrings = new string[tags.Count];
             for (int i = 0; i < tags.Count; i++)
-                tagStrings[i] = $"\"{tags[i].comment}\" @ {tags[i].timeValue} {tags[i].timeUnit}";
+                tagStrings[i] = tags[i].ToString();
             return tagStrings;
         }
 
